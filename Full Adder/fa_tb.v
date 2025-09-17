@@ -27,12 +27,13 @@ module q1_tb();
 		   #5 a = 1 ; b = 0 ; cin = 1;
 		   #5 a = 0 ; b = 1 ; cin = 1;
 		   #5 a = 1 ; b = 0 ; cin = 0;
+		   $finish;
 	   end
 
 	   initial 
 	   begin
 		   $monitor ( $time, " inputs:--- a=%d , b=%d , cin=%d outputs:--- sum=%d , cout=%d", a,b,cin,sum,cout);
-		   $finish;
+		   
 	   end
 
 	   initial 
