@@ -14,9 +14,9 @@ module mux_41_tb();
 	         .sel(sel)
 	 );
          initial
-			begin
+	     begin
 			
-			  $monitor ($time, " inputs:-- I=%b , sel=%b , outputs:--Y=%b ", I,sel,Y);
+		$monitor ($time, " inputs:-- I=%b , sel=%b , outputs:--Y=%b ", I,sel,Y);
  // Test I0
     I = 4'b0001;
     sel = 2'b00; #10;

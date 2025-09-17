@@ -31,9 +31,9 @@ module rca_4_tb();
 		     #10  a = 4'b0100 ; b = 4'b0100 ; cin = 1;
 		     #10  a = 4'b0000 ; b = 4'b0000 ; cin = 0;
 			  #10  a = 4'b1111 ; b = 4'b0001 ; cin = 1;
-
+$finish;
 		     #10;
-		     $finish;
+		     
 		    
 	     end
 
