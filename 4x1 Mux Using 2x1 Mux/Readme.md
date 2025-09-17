@@ -1,7 +1,7 @@
 
 
 
-### 📄 2. `Mux_4x1_Using_2x1_Mux/README.md`
+
 
 # 4x1 Multiplexer using 2x1 Multiplexers
 
