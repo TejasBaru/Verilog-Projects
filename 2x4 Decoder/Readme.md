@@ -59,3 +59,7 @@ Using Xilinx ISE (ISim)
     Set Decoder_2x4_tb.v as the top module.
 
     Run behavioral simulation.
+
+📈 Waveform
+
+![Waveform](waveform.png)
