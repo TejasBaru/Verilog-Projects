@@ -48,7 +48,7 @@ It demonstrates how tri-state logic can be used to implement bus-based multiplex
 
 ### Using Icarus Verilog
 ```bash
-iverilog -o mux41_dec_sim q5a.v q5b.v mux_41_decoder_tristate.v mux_41_decoder_tristate_tb.v
+iverilog -o mux41_dec_sim tristatebuffer.v decoder2x4.v mux_41.v mux_41_tb.v
 vvp mux41_dec_sim
 gtkwave dump.vcd &
 
@@ -56,7 +56,7 @@ Using Xilinx ISE (ISim)
 
     Create a new project.
 
-    Add q5a.v, q5b.v, mux_41_decoder_tristate.v, and mux_41_decoder_tristate_tb.v.
+    Add tristatebuffer.v, decoder2x4.v, mux_41_decoder_tristate.v, and mux_41_tb.v.
 
     Set mux_41_decoder_tristate_tb.v as the top module.
 
