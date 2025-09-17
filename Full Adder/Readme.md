@@ -66,7 +66,8 @@ Using Xilinx ISE (ISim)
 
 📈 Waveform
 
-<img width="1850" height="1053" alt="image" src="https://github.com/user-attachments/assets/e50951e4-c192-4bb2-95d0-ab513e31b3c7" />
+![Waveform](waveform.png)
+
 
 The waveform will confirm:
 
