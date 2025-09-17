@@ -2,7 +2,7 @@
 
 
 ## 📂 Files
-- **full_adder.v** → RTL code for Full Adder  
+- **fa.v** → RTL code for Full Adder  
 - **fa_tb.v** → Testbench for Full Adder  
 
 ---
