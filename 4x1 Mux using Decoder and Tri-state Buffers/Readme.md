@@ -6,10 +6,10 @@ It demonstrates how tri-state logic can be used to implement bus-based multiplex
 ---
 
 ## 📂 Files
-- **q5a.v** → RTL code for Tri-State Buffer  
-- **q5b.v** → RTL code for 2x4 Decoder  
-- **mux_41_decoder_tristate.v** → RTL code for 4x1 Multiplexer using decoder + tri-states  
-- **mux_41_decoder_tristate_tb.v** → Testbench for verification  
+- **tristatebuffer.v** → RTL code for Tri-State Buffer  
+- **decoder2x4.v** → RTL code for 2x4 Decoder  
+- **mux_41.v** → RTL code for 4x1 Multiplexer using decoder + tri-states  
+- **mux_41_tb.v** → Testbench for verification  
 
 ---
 
