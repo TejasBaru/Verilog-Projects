@@ -67,3 +67,6 @@ Using Xilinx ISE (ISim)
     Set fa_tb.v as the top module.
 
     Run behavioral simulation.
+
+## Waveform
+![Waveform](waveform.png)
