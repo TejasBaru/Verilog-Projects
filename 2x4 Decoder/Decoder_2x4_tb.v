@@ -18,6 +18,8 @@ module decoder2to4_tb();
      begin
 	     $display(" Starting Simulation");
 	     en = 1;
+	     $dumpfile("dump.vcd");
+	     $dumpvars;
 	     $monitor($time , "inputs:-- D=%b , en =%b , outputs:-- Y=%b", D,en,Y);
 
 	     for(i=0 ; i<4 ; i = i+1)

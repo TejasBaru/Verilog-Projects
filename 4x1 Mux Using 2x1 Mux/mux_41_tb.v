@@ -15,7 +15,10 @@ module mux_41_tb();
 	 );
          initial
 	     begin
-			
+		
+		$dumpfile("dump.vcd");
+		$dumpvars;	
+		
 		$monitor ($time, " inputs:-- I=%b , sel=%b , outputs:--Y=%b ", I,sel,Y);
  // Test I0
     I = 4'b0001;

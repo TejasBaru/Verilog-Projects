@@ -19,6 +19,8 @@ module rca_4_tb();
 
 	     initial
 	     begin
+		     $dumpfile("dump.vcd");
+		     $dumpvars;
 		     $monitor( $time, "inputs: a=%b , b=%b , cin=%b , outputs:-- sum=%b , carry=%b", a,b,cin,sum,carry);
 
 		     a = 4'b0000;; b = 4'b0000 ; cin = 0;
