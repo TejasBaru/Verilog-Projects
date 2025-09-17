@@ -62,7 +62,7 @@ Using Xilinx ISE (ISim)
 
 📈 Waveform
 
-(Insert GTKWave or ISim screenshot here)
+![Waveform](waveform.png)
 
 The waveform should show that:
 
