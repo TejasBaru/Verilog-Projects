@@ -61,3 +61,8 @@ Using Xilinx ISE (ISim)
     Set mux_41_decoder_tristate_tb.v as the top module.
 
     Run behavioral simulation.
+
+
+📈 Waveform
+
+![Waveform](waveform.png)
