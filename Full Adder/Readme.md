@@ -1,18 +1,29 @@
-# Full Adder
+#  Full Adder
 
+A **Full Adder** is a combinational circuit that performs the arithmetic sum of three input bits (two significant bits and a carry-in).  
+It produces a sum and a carry-out as outputs.
+
+---
 
 ## 📂 Files
-- **fa.v** → RTL code for Full Adder  
+- **fa.v** → RTL code for 1-bit Full Adder  
 - **fa_tb.v** → Testbench for Full Adder  
 
 ---
 
 ## 🧮 Functionality
-- **Inputs:** a, b, cin  
-- **Outputs:** sum, carry  
-- Performs binary addition of three 1-bit inputs.  
+- **Inputs:**
+  - `a` → first input bit  
+  - `b` → second input bit  
+  - `cin` → carry input  
 
-Truth table:
+- **Outputs:**
+  - `sum` → result of (a ⊕ b ⊕ cin)  
+  - `carry` → carry output from addition  
+
+---
+
+## 🗂 Truth Table
 
 | a | b | cin | sum | carry |
 |---|---|-----|-----|-------|
@@ -27,9 +38,37 @@ Truth table:
 
 ---
 
+## ⚙️ Working Principle
+- `sum = a ⊕ b ⊕ cin`  
+- `carry = (a & b) | (b & cin) | (a & cin)`  
+
+The sum is calculated using XOR gates, while the carry is derived from majority logic.
+
+---
+
 ## ▶️ How to Simulate
-Icarus Verilog:
+
+### Using Icarus Verilog
 ```bash
-iverilog -o fa_sim full_adder.v fa_tb.v
+iverilog -o fa_sim fa.v fa_tb.v
 vvp fa_sim
 gtkwave dump.vcd &
+
+Using Xilinx ISE (ISim)
+
+    Create a new project.
+
+    Add fa.v and fa_tb.v.
+
+    Set fa_tb.v as the top module.
+
+    Run behavioral simulation.
+
+📈 Waveform
+
+<img width="1850" height="1053" alt="image" src="https://github.com/user-attachments/assets/e50951e4-c192-4bb2-95d0-ab513e31b3c7" />
+
+The waveform will confirm:
+
+    Correct sum and carry outputs according to the truth table.
+
