@@ -68,5 +68,6 @@ Using Xilinx ISE (ISim)
 
     Run behavioral simulation.
 
-## Waveform
+📈 Waveform
+
 ![Waveform](waveform.png)
