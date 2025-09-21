@@ -86,7 +86,7 @@ endmodule
 3. View waveforms in GTKWave:
 
    ```bash
-   gtkwave bidbuffer_tb.vcd
+   gtkwave dump.vcd
    ```
 
 ---
