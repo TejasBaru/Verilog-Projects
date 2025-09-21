@@ -100,7 +100,8 @@ Using Xilinx ISE (ISim)
    Run Behavioral Simulation.
    
 📈 Waveform
-![Waveform](waveform.png)
+![Waveform](Waveform.png)
+
 The waveform will confirm:
 
 Correct arithmetic operations (ADD, SUB, MUL, DIV, INC, DEC, SHL, SHR).
