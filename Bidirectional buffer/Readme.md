@@ -109,6 +109,6 @@ Waveform should clearly show direction switching with control signal.
 
 
 📊 Waveform
-!Waveform[Waveform.png]
+![Waveform](Waveform.png)
 
 
