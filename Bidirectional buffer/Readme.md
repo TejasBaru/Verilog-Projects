@@ -76,7 +76,7 @@ endmodule
 1. Compile the design and testbench:
 
    ```bash
-   iverilog -o bidbuffer_tb.vvp bidbuffer.v bidbuffer_tb.v
+   iverilog -o bidbuffer_tb.vvp bidirectional_buffer.v bidirectional_buffer_tb.v
    ```
 2. Run the simulation:
 
