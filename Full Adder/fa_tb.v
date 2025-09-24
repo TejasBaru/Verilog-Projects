@@ -1,4 +1,4 @@
-// Write testbench for 1 bit full adder to verufy
+// Write testbench for 1 bit full adder to verify
 
 
 

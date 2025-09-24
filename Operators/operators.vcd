@@ -1,0 +1,153 @@
+$date
+	Sun Sep 21 22:28:41 2025
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module operator_practice_tb $end
+$var wire 4 ! ternary [3:0] $end
+$var wire 5 " sum [4:0] $end
+$var wire 4 # rshift [3:0] $end
+$var wire 3 $ replicate [2:0] $end
+$var wire 4 % rem [3:0] $end
+$var wire 1 & red_xor $end
+$var wire 1 ' red_or $end
+$var wire 1 ( red_and $end
+$var wire 4 ) quot [3:0] $end
+$var wire 8 * prod [7:0] $end
+$var wire 1 + nred_xnor $end
+$var wire 1 , nred_or $end
+$var wire 1 - nred_and $end
+$var wire 1 . neq $end
+$var wire 1 / lt $end
+$var wire 4 0 lshift [3:0] $end
+$var wire 1 1 lor $end
+$var wire 1 2 lnot $end
+$var wire 1 3 le $end
+$var wire 1 4 land $end
+$var wire 1 5 gt $end
+$var wire 1 6 ge $end
+$var wire 1 7 eq $end
+$var wire 5 8 diff [4:0] $end
+$var wire 8 9 concat [7:0] $end
+$var wire 1 : cneq $end
+$var wire 1 ; ceq $end
+$var wire 4 < bxor [3:0] $end
+$var wire 4 = bxnor [3:0] $end
+$var wire 4 > bor [3:0] $end
+$var wire 4 ? bnot [3:0] $end
+$var wire 4 @ band [3:0] $end
+$var wire 4 A arshift [3:0] $end
+$var wire 4 B alshift [3:0] $end
+$var reg 4 C a [3:0] $end
+$var reg 4 D b [3:0] $end
+$var reg 4 E sa [3:0] $end
+$var reg 4 F sb [3:0] $end
+$scope module uut $end
+$var wire 4 G a [3:0] $end
+$var wire 4 H b [3:0] $end
+$var wire 4 I band [3:0] $end
+$var wire 4 J bnot [3:0] $end
+$var wire 4 K bor [3:0] $end
+$var wire 4 L bxnor [3:0] $end
+$var wire 4 M bxor [3:0] $end
+$var wire 1 4 land $end
+$var wire 1 1 lor $end
+$var wire 4 N sa [3:0] $end
+$var wire 4 O sb [3:0] $end
+$var wire 4 P ternary [3:0] $end
+$var wire 5 Q sum [4:0] $end
+$var wire 4 R rshift [3:0] $end
+$var wire 3 S replicate [2:0] $end
+$var wire 4 T rem [3:0] $end
+$var wire 1 & red_xor $end
+$var wire 1 ' red_or $end
+$var wire 1 ( red_and $end
+$var wire 4 U quot [3:0] $end
+$var wire 8 V prod [7:0] $end
+$var wire 1 + nred_xnor $end
+$var wire 1 , nred_or $end
+$var wire 1 - nred_and $end
+$var wire 1 . neq $end
+$var wire 1 / lt $end
+$var wire 4 W lshift [3:0] $end
+$var wire 1 2 lnot $end
+$var wire 1 3 le $end
+$var wire 1 5 gt $end
+$var wire 1 6 ge $end
+$var wire 1 7 eq $end
+$var wire 5 X diff [4:0] $end
+$var wire 8 Y concat [7:0] $end
+$var wire 1 : cneq $end
+$var wire 1 ; ceq $end
+$var wire 4 Z arshift [3:0] $end
+$var wire 4 [ alshift [3:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+b100 [
+b1110 Z
+b10100110 Y
+b100 X
+b100 W
+b111100 V
+b1 U
+b100 T
+b111 S
+b11 R
+b10000 Q
+b1010 P
+b10 O
+b1101 N
+b1100 M
+b11 L
+b1110 K
+b101 J
+b10 I
+b110 H
+b1010 G
+b10 F
+b1101 E
+b110 D
+b1010 C
+b100 B
+b1110 A
+b10 @
+b101 ?
+b1110 >
+b11 =
+b1100 <
+0;
+1:
+b10100110 9
+b100 8
+07
+16
+15
+14
+03
+02
+11
+b100 0
+0/
+1.
+1-
+0,
+1+
+b111100 *
+b1 )
+0(
+1'
+0&
+b100 %
+b111 $
+b11 #
+b10000 "
+b1010 !
+$end
+#100000

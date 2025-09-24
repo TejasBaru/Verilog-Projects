@@ -2,9 +2,6 @@
 // adder
 
 
-
-
-
 module rca_1(sum, carry, a, b, cin);
        output sum, carry;
        input a, b, cin;

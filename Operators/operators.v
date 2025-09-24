@@ -1,58 +1,93 @@
-// Q1. RTL Code to practice all operators
+module operator_practice(
+  input  [3:0] a,
+  input  [3:0] b,
+  input  signed [3:0] sa,
+  input  signed [3:0] sb,
 
+  // Arithmetic
+  output [4:0] sum,
+  output [4:0] diff,
+  output [7:0] prod,
+  output [3:0] quot,
+  output [3:0] rem,
 
-// operator_practice.v
-module operator_practice;
+  // Relational
+  output gt, lt, ge, le,
 
-  reg [3:0] a, b;
-  reg signed [3:0] sa, sb;
+  // Equality
+  output eq, neq, ceq, cneq,
 
-  initial begin
-    // Initialize
-    a  = 4'b1010;   // 10
-    b  = 4'b0110;   // 6
-    sa = -3;        // signed example
-    sb = 2;
+  // Logical
+  output land, lor, lnot,
 
-    // Arithmetic Operators
-    $display("Arithmetic Operators:");
-    $display("a+b=%d, a-b=%d, a*b=%d, a/b=%d, a%%b=%d", a+b, a-b, a*b, a/b, a%b);
+  // Bitwise
+  output [3:0] band, bor, bxor, bnot, bxnor,
 
-    // Relational Operators
-    $display("\nRelational Operators:");
-    $display("a>b=%b, a<b=%b, a>=b=%b, a<=b=%b", (a>b), (a<b), (a>=b), (a<=b));
+  // Shifts
+  output [3:0] lshift, rshift,
+  output signed [3:0] arshift, alshift,
 
-    // Equality Operators
-    $display("\nEquality Operators:");
-    $display("a==b=%b, a!=b=%b, a===b=%b, a!==b=%b", (a==b), (a!=b), (a===b), (a!==b));
+  // Reductions
+  output red_and, red_or, red_xor, nred_and, nred_or, nred_xnor,
 
-    // Logical Operators
-    $display("\nLogical Operators:");
-    $display("(a&&b)=%b, (a||b)=%b, !a=%b", (a&&b), (a||b), !a);
+  // Conditional
+  output [3:0] ternary,
 
-    // Bitwise Operators
-    $display("\nBitwise Operators:");
-    $display("a&b=%b, a|b=%b, a^b=%b, ~a=%b, a^~b=%b", (a&b), (a|b), (a^b), ~a, (a^~b));
+  // Concatenation/Replication
+  output [7:0] concat,
+  output [2:0] replicate
+);
 
-    // Shift Operators
-    $display("\nShift Operators:");
-    $display("a<<1=%b, b>>1=%b, sa>>>1=%b, sb<<<1=%b", (a<<1), (b>>1), (sa>>>1), (sb<<<1));
+  // Arithmetic
+  assign sum  = a + b;
+  assign diff = a - b;
+  assign prod = a * b;
+  assign quot = a / b;
+  assign rem  = a % b;
 
-    // Reduction Operators
-    $display("\nReduction Operators:");
-    $display("&a=%b, |a=%b, ^a=%b, ~&a=%b, ~|a=%b, ~^a=%b", &a, |a, ^a, ~&a, ~|a, ~^a);
+  // Relational
+  assign gt = (a > b);
+  assign lt = (a < b);
+  assign ge = (a >= b);
+  assign le = (a <= b);
 
-    // Conditional Operator
-    $display("\nConditional (Ternary) Operator:");
-    $display("(a>b)?a:b = %d", (a>b)?a:b);
+  // Equality
+  assign eq   = (a == b);
+  assign neq  = (a != b);
+  assign ceq  = (a === b);
+  assign cneq = (a !== b);
 
-    // Concatenation and Replication
-    $display("\nConcatenation & Replication:");
-    $display("{a,b} = %b", {a,b});
-    $display("{3{b[1]}} = %b", {3{b[1]}});
+  // Logical
+  assign land = (a && b);
+  assign lor  = (a || b);
+  assign lnot = !a;
 
-    $finish;
-  end
+  // Bitwise
+  assign band = a & b;
+  assign bor  = a | b;
+  assign bxor = a ^ b;
+  assign bnot = ~a;
+  assign bxnor = a ^~ b;
+
+  // Shifts
+  assign lshift  = a << 1;
+  assign rshift  = b >> 1;
+  assign arshift = sa >>> 1;
+  assign alshift = sb <<< 1;
+
+  // Reduction
+  assign red_and   = &a;
+  assign red_or    = |a;
+  assign red_xor   = ^a;
+  assign nred_and  = ~&a;
+  assign nred_or   = ~|a;
+  assign nred_xnor = ~^a;
+
+  // Conditional
+  assign ternary = (a > b) ? a : b;
+
+  // Concatenation/Replication
+  assign concat    = {a, b};
+  assign replicate = {3{b[1]}};
 
 endmodule
-
