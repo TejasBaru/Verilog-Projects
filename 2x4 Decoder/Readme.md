@@ -110,18 +110,17 @@ Using Xilinx ISE (ISim)
 ---
 
 ## 🧠 Applications
-
-    1. Memory address decoding
-    2. Chip enable control
-    3. Instruction decoding in processors
-    4.Signal demultiplexing
-    5.Microcontroller peripheral selection
+1.  Memory address decoding
+2.  Chip enable control
+3.  Instruction decoding in processors
+4.  Signal demultiplexing
+5.  Microcontroller peripheral selection
 
 ## ✅ Future Improvements
-    1. Add 3x8 or 4x16 decoder using parameterized design
-    2. Include enable chaining for cascading decoders
-    3. Add test vector automation in the testbench
-    4. Extend for BCD-to-decimal decoding
+1. Add 3x8 or 4x16 decoder using parameterized design
+2. Include enable chaining for cascading decoders
+3. Add test vector automation in the testbench
+4. Extend for BCD-to-decimal decoding
 
 ## 🏁 Conclusion
 
