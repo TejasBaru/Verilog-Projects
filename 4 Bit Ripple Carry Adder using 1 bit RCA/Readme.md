@@ -78,21 +78,16 @@ gtkwave dump.vcd &
 ```
 ## 🧠 Applications
 
-    Arithmetic Logic Units (ALUs)
-
-    Binary counters and accumulators
-
-    Digital signal processors
-
-    Address generation units
+1. Arithmetic Logic Units (ALUs)
+2.Binary counters and accumulators
+3. Digital signal processors
+4. Address generation units
 
 ## ✅ Future Improvements
 
-    Implement Carry Look-Ahead Adder (CLA) for faster performance
-
-    Extend to 8-bit or 16-bit RCA using parameterized modules
-
-    Add automated testbench with randomized input generation
+1. Implement Carry Look-Ahead Adder (CLA) for faster performance
+2. Extend to 8-bit or 16-bit RCA using parameterized modules
+3. Add automated testbench with randomized input generation
 
 ## 🏁 Conclusion
 
