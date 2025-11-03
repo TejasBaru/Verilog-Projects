@@ -90,8 +90,7 @@ Using Icarus Verilog
 iverilog -o dec_sim Decoder_2x4.v Decoder_2x4_tb.v
 vvp dec_sim
 gtkwave dump.vcd &
-```
----
+
 
 Using Xilinx ISE (ISim)
 
@@ -102,7 +101,7 @@ Add Decoder_2x4.v and Decoder_2x4_tb.v to the project.
 Set Decoder_2x4_tb.v as the top module.
 
 Run Behavioral Simulation.
-
+```
 ## 📊 Example Output (Console Example)
 ```
 ----- 2x4 Decoder Simulation -----
