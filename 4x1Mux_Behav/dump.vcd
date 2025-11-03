@@ -1,0 +1,80 @@
+$date
+	Wed Sep 24 22:15:58 2025
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module mux4_1_tb $end
+$var wire 1 ! y $end
+$var reg 4 " data_in [3:0] $end
+$var reg 2 # sel_in [1:0] $end
+$scope module dut $end
+$var wire 4 $ data_in [3:0] $end
+$var wire 2 % sel_in [1:0] $end
+$var reg 1 ! y $end
+$upscope $end
+$scope task initial_c $end
+$upscope $end
+$scope task stimuli $end
+$var reg 4 & d [3:0] $end
+$var reg 2 ' sel [1:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+bx '
+bx &
+b0 %
+b0 $
+b0 #
+b0 "
+0!
+$end
+#10
+1!
+b101 "
+b101 $
+b0 '
+b101 &
+#25
+0!
+b1 #
+b1 %
+b1 '
+#40
+1!
+b10 #
+b10 %
+b10 '
+#55
+0!
+b11 #
+b11 %
+b11 '
+#75
+b0 #
+b0 %
+b1010 "
+b1010 $
+b0 '
+b1010 &
+#90
+1!
+b1 #
+b1 %
+b1 '
+#105
+0!
+b10 #
+b10 %
+b10 '
+#120
+1!
+b11 #
+b11 %
+b11 '
+#140

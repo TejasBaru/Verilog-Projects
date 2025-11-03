@@ -1,0 +1,113 @@
+$date
+	Wed Sep 24 22:36:10 2025
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module pe_83_tb $end
+$var wire 1 ! valid $end
+$var wire 3 " Y [2:0] $end
+$var reg 8 # D [7:0] $end
+$scope module dut $end
+$var wire 8 $ D [7:0] $end
+$var reg 3 % Y [2:0] $end
+$var reg 1 ! valid $end
+$upscope $end
+$scope task initial_c $end
+$upscope $end
+$scope task stimuli $end
+$var reg 8 & d [7:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+bx &
+bx %
+b0 $
+b0 #
+bx "
+1!
+$end
+#5
+b0 &
+#15
+b0 "
+b0 %
+b1 #
+b1 $
+b1 &
+#25
+b1 "
+b1 %
+b10 #
+b10 $
+b10 &
+#35
+b10 "
+b10 %
+b100 #
+b100 $
+b100 &
+#45
+b11 "
+b11 %
+b1000 #
+b1000 $
+b1000 &
+#55
+b100 "
+b100 %
+b10000 #
+b10000 $
+b10000 &
+#65
+b101 "
+b101 %
+b100000 #
+b100000 $
+b100000 &
+#75
+b110 "
+b110 %
+b1000000 #
+b1000000 $
+b1000000 &
+#85
+b111 "
+b111 %
+b10000000 #
+b10000000 $
+b10000000 &
+#95
+b10101010 #
+b10101010 $
+b10101010 &
+#105
+b110 "
+b110 %
+b1010101 #
+b1010101 $
+b1010101 &
+#115
+b101 "
+b101 %
+b110011 #
+b110011 $
+b110011 &
+#125
+b111 "
+b111 %
+b11001100 #
+b11001100 $
+b11001100 &
+#135
+b100 "
+b100 %
+b10001 #
+b10001 $
+b10001 &
+#145

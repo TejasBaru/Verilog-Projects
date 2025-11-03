@@ -1,0 +1,98 @@
+$date
+	Wed Sep 24 22:26:12 2025
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module decoder3_8_tb $end
+$var wire 8 ! Y [7:0] $end
+$var reg 3 " A [2:0] $end
+$var reg 1 # en $end
+$scope module dut $end
+$var wire 3 $ A [2:0] $end
+$var wire 1 # en $end
+$var reg 8 % Y [7:0] $end
+$upscope $end
+$scope task initial_c $end
+$upscope $end
+$scope task stimuli $end
+$var reg 3 & a [2:0] $end
+$var reg 1 ' enable $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+x'
+bx &
+bz %
+b0 $
+0#
+b0 "
+bz !
+$end
+#5
+0'
+b0 &
+#15
+b1 "
+b1 $
+b1 &
+#25
+b111 "
+b111 $
+b111 &
+#40
+b0 !
+b0 %
+1#
+b0 "
+b0 $
+1'
+b0 &
+#50
+b1 !
+b1 %
+b1 "
+b1 $
+b1 &
+#60
+b10 !
+b10 %
+b10 "
+b10 $
+b10 &
+#70
+b11 !
+b11 %
+b11 "
+b11 $
+b11 &
+#80
+b100 !
+b100 %
+b100 "
+b100 $
+b100 &
+#90
+b101 !
+b101 %
+b101 "
+b101 $
+b101 &
+#100
+b110 !
+b110 %
+b110 "
+b110 $
+b110 &
+#110
+b111 !
+b111 %
+b111 "
+b111 $
+b111 &
+#120
