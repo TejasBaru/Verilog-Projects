@@ -84,13 +84,13 @@ Install the following tools:
 sudo apt install iverilog gtkwave
 ```
 ## ▶️ Steps to Simulate
-
+```bash
 Using Icarus Verilog
 
 iverilog -o dec_sim Decoder_2x4.v Decoder_2x4_tb.v
 vvp dec_sim
 gtkwave dump.vcd &
-
+```
 ---
 
 Using Xilinx ISE (ISim)
@@ -104,14 +104,14 @@ Set Decoder_2x4_tb.v as the top module.
 Run Behavioral Simulation.
 
 ## 📊 Example Output (Console Example)
-
+```
 ----- 2x4 Decoder Simulation -----
 # en=0, a=00 → y=0000
 # en=1, a=00 → y=0001
 # en=1, a=01 → y=0010
 # en=1, a=10 → y=0100
 # en=1, a=11 → y=1000
-
+```
 ## 🧠 Applications
 
     Memory address decoding
