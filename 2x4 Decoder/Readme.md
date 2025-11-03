@@ -82,7 +82,7 @@ Install the following tools:
 
 ```bash
 sudo apt install iverilog gtkwave
-
+```
 ## ▶️ Steps to Simulate
 
 Using Icarus Verilog
