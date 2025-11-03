@@ -107,6 +107,8 @@ Using Xilinx ISE (ISim)
 # en=1, a=10 → y=0100
 # en=1, a=11 → y=1000
 ```
+---
+
 ## 🧠 Applications
 
     1. Memory address decoding
