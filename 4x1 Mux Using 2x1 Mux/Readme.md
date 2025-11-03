@@ -84,6 +84,10 @@ gtkwave dump.vcd &
 # sel=10 → Y=I2
 # sel=11 → Y=I3
 
+## 📈 Waveform
+
+![Waveform](Waveform.png)
+---
 ## 🧠 Applications
 
 1. Data routing in digital systems
