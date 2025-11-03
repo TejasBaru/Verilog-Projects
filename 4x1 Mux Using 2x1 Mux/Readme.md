@@ -86,16 +86,16 @@ gtkwave dump.vcd &
 
 ## 🧠 Applications
 
-1.Data routing in digital systems
-2.Control signal multiplexing
-3.ALU and register file input selection
-4.Communication and signal switching circuits
+1. Data routing in digital systems
+2. Control signal multiplexing
+3. ALU and register file input selection
+4. Communication and signal switching circuits
 
 ## ✅ Future Improvements
 
-1.Extend to 8x1 or 16x1 MUX using parameterized design
-2.Add enable input (EN) for controlled operation
-3.Implement testbench automation with randomized input generation
+1. Extend to 8x1 or 16x1 MUX using parameterized design
+2. Add enable input (EN) for controlled operation
+3. Implement testbench automation with randomized input generation
 
 ## 🏁 Conclusion
 
