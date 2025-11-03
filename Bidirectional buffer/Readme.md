@@ -1,114 +1,80 @@
-
 # 🔀 Bidirectional Buffer – Verilog RTL
 
-## 📌 Aim
-
-To design and verify a **Bidirectional Buffer** in Verilog using RTL modeling and testbench simulation.
-
----
-
-## 📖 Theory
-
-A **bidirectional buffer** allows signals to flow in **both directions**, but only one direction at a time, controlled by an **enable/control signal**.
-
-* When `control = 1` → Data flows from **A → B**.
-* When `control = 0` → Data flows from **B → A**.
-
-Bidirectional buffers are commonly used in **data buses** where multiple devices need to communicate without causing conflicts.
-
-In Verilog, this is implemented using **`bufif1`** and **`bufif0`** primitives:
-
-* `bufif1` → Passes signal when control = 1, otherwise high impedance (`z`).
-* `bufif0` → Passes signal when control = 0, otherwise high impedance (`z`).
+## 📘 Overview
+This project implements a **Bidirectional Buffer** in **Verilog HDL** and verifies its functionality through a **testbench simulation**.  
+A bidirectional buffer enables signals to flow **in both directions**, but **only one direction at a time**, controlled by a **control signal**.
 
 ---
 
-## ⚡ RTL Code
+## 🧠 Theory
+A **Bidirectional Buffer** is widely used in **shared bus architectures** where multiple devices communicate using a common data line.  
+Depending on the control signal:
 
-```verilog
-module bidbuffer (
-    input  control,
-    inout  a,
-    inout  b
-);
-    bufif1 b1 (b, a, control);   // a → b when control=1
-    bufif0 b2 (a, b, control);   // b → a when control=0
-endmodule
+- When `control = 1` → data flows **from A → B**  
+- When `control = 0` → data flows **from B → A**
+
+To implement this, Verilog provides two special primitives:
+- `bufif1` → passes input when control = 1, else outputs high impedance (`Z`)  
+- `bufif0` → passes input when control = 0, else outputs high impedance (`Z`)
+
+This ensures only one side drives the bus at any time, preventing **bus contention**.
+
+---
+
+## 📂 Files
+- **bidirectional_buffer.v** → RTL code for Bidirectional Buffer  
+- **bidirectional_buffer_tb.v** → Testbench for Bidirectional Buffer  
+
+---
+
+## ⚙️ Functionality
+
+| Control | Data Direction | Active Buffer | Description |
+|----------|----------------|----------------|--------------|
+| 1 | A → B | bufif1 | A drives B |
+| 0 | B → A | bufif0 | B drives A |
+
+When one side drives the bus, the other remains in **high-impedance (`Z`)** state, ensuring safe bidirectional data transfer.
+
+---
+
+## ▶️ How to Simulate
+
+### Using Icarus Verilog
+```bash
+iverilog -o bidbuffer_sim bidirectional_buffer.v bidirectional_buffer_tb.v
+vvp bidbuffer_sim
+gtkwave dump.vcd &
 ```
-
----
-
-## 🧪 Testbench
-
-```verilog
-`timescale 1ns/1ps
-module bidbuffer_tb;
-    wire a, b;
-    reg control;
-    reg tempa, tempb;
-
-    // DUT instantiation
-    bidbuffer dut (.control(control), .a(a), .b(b));
-
-    // Conditional driving
-    assign b = (control==0) ? tempb : 1'bz;
-    assign a = (control==1) ? tempa : 1'bz;
-
-    initial begin
-        {tempa, tempb, control} = 0;
-        $dumpfile("bidbuffer_tb.vcd");
-        $dumpvars(0, bidbuffer_tb);
-        #200 $finish;
-    end
-
-    always #10 tempa   = ~tempa;
-    always #20 tempb   = ~tempb;
-    always #40 control = ~control;
-
-    initial $monitor("t=%0t | a=%b b=%b control=%b", $time, a, b, control);
-endmodule
+### Using Xilinx ISE (ISim)
 ```
+    Create a new project.
 
----
+    Add bidirectional_buffer.v and bidirectional_buffer_tb.v.
 
-## ▶️ Simulation Steps
+    Set bidirectional_buffer_tb.v as the top module.
 
-1. Compile the design and testbench:
+    Run Behavioral Simulation and view the waveform.
+```
+### 📊 Expected Output
+```
+    When control = 1 → A drives B.
 
-   ```bash
-   iverilog -o bidbuffer_tb.vvp bidirectional_buffer.v bidirectional_buffer_tb.v
-   ```
-2. Run the simulation:
+    When control = 0 → B drives A.
 
-   ```bash
-   vvp bidbuffer_tb.vvp
-   ```
-3. View waveforms in GTKWave:
+    Inactive line stays in high-impedance (Z).
 
-   ```bash
-   gtkwave dump.vcd
-   ```
+The waveform will show data transfer direction switching as the control signal toggles between 0 and 1.
+```
+## 🧰 Applications
+```
+    Used in microprocessor and microcontroller data buses.
 
----
+    Prevents bus contention in shared data paths.
 
-## 📊 Expected Output
-
-* When `control = 1` → `a` drives `b`.
-* When `control = 0` → `b` drives `a`.
-* High-impedance (`z`) state occurs when a line is not driving.
-
-Waveform should clearly show direction switching with control signal.
-
----
-
-## 📝 Applications
-
-* Used in **microprocessor data buses**.
-* Avoids **bus contention** when multiple devices share the same line.
-* Common in **I²C, memory systems, and bidirectional I/O pins**.
-
-
-📊 Waveform
+    Found in I²C, memory buses, and bidirectional I/O ports.
+```
+## 📈 Waveform
 ![Waveform](Waveform.png)
 
 
