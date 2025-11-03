@@ -91,6 +91,7 @@ iverilog -o dec_sim Decoder_2x4.v Decoder_2x4_tb.v
 vvp dec_sim
 gtkwave dump.vcd &
 
+---
 
 Using Xilinx ISE (ISim)
 
