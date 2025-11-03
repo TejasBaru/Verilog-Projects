@@ -91,9 +91,9 @@ gtkwave dump.vcd &
 ```
 ## 📈 Waveform
 The waveform confirms:
-        1. Only one input drives the output at a time.
-        2. When en=0, the output Y remains in high-impedance (Z).
-        3. Correct one-hot selection according to decoder output.
+1. Only one input drives the output at a time.
+2. When en=0, the output Y remains in high-impedance (Z).
+3. Correct one-hot selection according to decoder output.
 
 ## 🧠 Applications
 1. Bus-based multiplexing in microprocessors
