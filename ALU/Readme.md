@@ -1,112 +1,81 @@
-# ⚙️ Verilog ALU Project
+# 🔀 Bidirectional Buffer – Verilog RTL
 
 ## 📘 Overview
-This project implements an **Arithmetic and Logic Unit (ALU)** in **Verilog HDL**.  
-The ALU performs a variety of **arithmetic**, **logical**, and **shift** operations based on the control input (`command`).  
-The design is verified using a **testbench** and simulated on **ISim** and **Icarus Verilog**.
+This project implements a **Bidirectional Buffer** in **Verilog RTL** and verifies its operation through a **testbench simulation**.  
+A bidirectional buffer allows signals to flow **in both directions**—but **only one direction at a time**, controlled by an **enable/control signal**.
 
 ---
 
-## 🧠 Features
-The ALU supports the following operations:
+## 🧠 Theory
+The **Bidirectional Buffer** is widely used in shared bus systems where multiple devices communicate over the same data lines.  
+Depending on the control signal:
 
-### 🔹 Arithmetic Operations
-- Addition  
-- Subtraction  
-- Multiplication  
-- Division  
-- Increment  
-- Decrement  
+- When `control = 1` → data flows **from A → B**.  
+- When `control = 0` → data flows **from B → A**.  
 
-### 🔹 Shift Operations
-- Logical Shift Left  
-- Logical Shift Right  
-- Arithmetic Shift Right  
+To implement this in Verilog, the design uses built-in primitives:
 
-### 🔹 Logic Operations
-- AND  
-- OR  
-- XOR  
-- NOR  
-- NAND  
-- XNOR  
-- NOT  
-- Buffer  
+- `bufif1` → passes the input signal when control = 1 (otherwise outputs high-impedance `Z`).  
+- `bufif0` → passes the input signal when control = 0 (otherwise outputs high-impedance `Z`).  
+
+This ensures **only one direction is active** at a time and prevents **bus contention**.
 
 ---
 
-## 🏗️ Project Structure
-
-├── alu.v # Main ALU module
-├── alu_tb.v # Testbench for ALU
-├── waveform.wcfg # ISim waveform configuration (optional)
-├── README.md # Project documentation
-
+## 📂 Files
+- **bidirectional_buffer.v** → RTL code for Bidirectional Buffer  
+- **bidirectional_buffer_tb.v** → Testbench for verification  
 
 ---
 
-## 🔑 ALU I/O
+## ⚙️ Functionality
 
-### Inputs
-- `a` → First operand (8-bit)  
-- `b` → Second operand (8-bit)  
-- `command` → Control signal (selects the ALU operation)  
+| Control | Data Direction | Active Buffer | Description |
+|----------|----------------|----------------|--------------|
+| 1 | A → B | bufif1 | A drives B |
+| 0 | B → A | bufif0 | B drives A |
 
-### Output
-- `out` → Result of operation  
-  - **16-bit** for multiplication  
-  - **8-bit** for all other operations  
+When one buffer is active, the other output remains in high-impedance (`Z`), allowing safe bidirectional communication.
 
 ---
 
-## 🧪 Simulation Procedure
+## ▶️ How to Simulate
 
-### ▶️ Using Icarus Verilog
+### Using Icarus Verilog
 ```bash
-iverilog -o alu_sim alu.v alu_tb.v
-vvp alu_sim
-gtkwave alu_tb.vcd &
+iverilog -o bidbuffer_sim bidirectional_buffer.v bidirectional_buffer_tb.v
+vvp bidbuffer_sim
+gtkwave dump.vcd &
 ```
-### ▶️ Using Xilinx ISE (ISim)
-1. Create a new project in Xilinx ISE.
-2. Add the following files:
-        alu.v
-        alu_tb.v
-3. Set alu_tb.v as the top module.
-4. Run Behavioral Simulation and observe the output waveform.
-
-### 📊 Example Output (Console)
-
-time=960000 | a=0 | b=6 | out=6
-time=970000 | a=0 | b=6 | out=10
-time=980000 | a=0 | b=6 | out=-6
-time=990000 | a=0 | b=6 | out=0
-
-## 📈 Waveform
-
-Waveform:
-
-![Waveform](Waveform.png)
-
-Waveform Verification:
+### Using Xilinx ISE (ISim)
 ```
-    ✅ Arithmetic operations (ADD, SUB, MUL, DIV, INC, DEC, SHL, SHR)
+    Create a new project in Xilinx ISE.
 
-    ✅ Logical operations (AND, OR, INV)
+    Add bidirectional_buffer.v and bidirectional_buffer_tb.v.
 
-    ✅ Bitwise operations (NAND, NOR, XOR, XNOR, BUF)
+    Set bidirectional_buffer_tb.v as the top module.
 
-    ✅ High-impedance output when oe = 0
+    Run Behavioral Simulation and view the results.
 ```
-## 🚀 Future Improvements
+## 📊 Expected Output
+```
+    When control = 1 → A drives B.
 
-    Add support for signed operations
+    When control = 0 → B drives A.
 
-    Implement overflow detection
+    High-impedance (Z) appears on the inactive line.
+---
+Waveform Behavior:
+The simulation waveform shows alternating drive directions as the control signal toggles.
+```
+## 🧰 Applications
+```
+    Used in microprocessor data buses.
 
-    Extend ALU to 16-bit or 32-bit width
+    Prevents bus contention in shared communication lines.
 
-    Add status flags (Zero, Carry, Overflow, Negative)
+    Commonly found in I²C, memory systems, and bidirectional I/O ports.
+```
 
 
-## ✅ This ALU demonstrates the fundamental principles of digital computation, combining arithmetic and logic functions in a modular and extensible Verilog design.
+✅ This project demonstrates bidirectional data control using Verilog primitives, showing how signal direction can be efficiently managed using bufif1 and bufif0.
