@@ -83,7 +83,7 @@ Install the following tools:
 ```bash
 sudo apt install iverilog gtkwave
 ```
-## ▶️ Steps to Simulate
+###▶️ Steps to Simulate
 ```bash
 Using Icarus Verilog
 
@@ -103,8 +103,8 @@ Set Decoder_2x4_tb.v as the top module.
 
 Run Behavioral Simulation.
 ```
-## 📊 Example Output (Console Example)
-```
+### 📊 Example Output (Console Example)
+```bash
 ----- 2x4 Decoder Simulation -----
 # en=0, a=00 → y=0000
 # en=1, a=00 → y=0001
