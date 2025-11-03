@@ -62,12 +62,12 @@ The **decoder** activates a single output line corresponding to the binary input
 ---
 
 ## 🏗️ Project Structure
-
+```
 ├── decoder3_8.v # RTL Design (3x8 Decoder)
 ├── decoder3_8_tb.v # Testbench for simulation
 ├── dump.vcd # Generated waveform file
 └── README.md # Documentation
-
+```
 ---
 
 ## 🔑 Decoder I/O
@@ -86,17 +86,17 @@ Install the following tools:
 
 ```bash
 sudo apt install iverilog gtkwave
-
-▶️ Steps to Simulate
-
+```
+## ▶️ Steps to Simulate
+```bash
 Using Icarus Verilog
 
 iverilog -o dec3_8_sim decoder3_8.v decoder3_8_tb.v
 vvp dec3_8_sim
 gtkwave dump.vcd &
-
+```
 ---
-
+```bash
 Using Xilinx ISE (ISim)
 
 Create a new project in Xilinx ISE.
@@ -106,8 +106,8 @@ Add decoder3_8.v and decoder3_8_tb.v to the project.
 Set decoder3_8_tb.v as the top module.
 
 Run Behavioral Simulation.
-
-📊 Example Output (Console Example)
+```
+## 📊 Example Output (Console Example)
 
 ----- 3x8 Decoder Simulation -----
 # en=0, A=000 → Y=00000000
@@ -120,7 +120,7 @@ Run Behavioral Simulation.
 # en=1, A=110 → Y=01000000
 # en=1, A=111 → Y=10000000
 
-🧠 Applications
+## 🧠 Applications
 
 Memory address decoding
 
@@ -132,7 +132,7 @@ Signal demultiplexing
 
 Microcontroller peripheral selection
 
-✅ Future Improvements
+## ✅ Future Improvements
 
 Add 4x16 decoder using parameterized design
 
@@ -142,7 +142,7 @@ Add test vector automation in the testbench
 
 Extend for BCD-to-decimal decoding
 
-🏁 Conclusion
+## 🏁 Conclusion
 
 This project demonstrates the design and verification of a 3x8 Decoder using Verilog HDL.
 The decoder converts a 3-bit binary input into one of eight unique outputs, ensuring only a single active line at any time.
