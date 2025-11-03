@@ -108,7 +108,7 @@ The waveform confirms:
 3. Add enable chaining for hierarchical control
 4. Automate testbench with dynamic stimulus generation
 
-🏁 Conclusion
+## 🏁 Conclusion
 
 This project showcases the design of a 4x1 Multiplexer using a 2x4 Decoder and Tri-State Buffers in Verilog HDL.
 It highlights the concept of tri-state bus control and hierarchical hardware design, making it ideal for digital design learning and practical lab implementations.
