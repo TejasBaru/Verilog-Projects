@@ -64,8 +64,13 @@ gtkwave dump.vcd &
     When control = 0 → B drives A.
 
     High-impedance (Z) appears on the inactive line.
+```
 ---
-Waveform Behavior:
+## 📈 Waveform
+
+![Waveform](Waveform.png)
+---
+```Waveform Behavior:
 The simulation waveform shows alternating drive directions as the control signal toggles.
 ```
 ## 🧰 Applications
