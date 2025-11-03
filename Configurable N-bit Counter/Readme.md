@@ -122,7 +122,10 @@ The waveform shows transitions corresponding to mode changes, with all updates s
 - **Verification Scope:** Functional correctness for all operational modes across N-bit width configurations  
 
 ---
+## 📈 Waveform
 
+![Waveform](Waveform.png)
+---
 ## 🌱 Future Enhancements
 - Add **asynchronous reset** for faster recovery.  
 - Introduce **loadable initial value** functionality.  
