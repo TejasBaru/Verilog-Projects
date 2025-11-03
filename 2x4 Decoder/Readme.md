@@ -83,7 +83,7 @@ Install the following tools:
 ```bash
 sudo apt install iverilog gtkwave
 
-▶️ Steps to Simulate
+## ▶️ Steps to Simulate
 
 Using Icarus Verilog
 
@@ -91,17 +91,19 @@ iverilog -o dec_sim Decoder_2x4.v Decoder_2x4_tb.v
 vvp dec_sim
 gtkwave dump.vcd &
 
+---
+
 Using Xilinx ISE (ISim)
 
-    Create a new project in Xilinx ISE.
+Create a new project in Xilinx ISE.
 
-    Add Decoder_2x4.v and Decoder_2x4_tb.v to the project.
+Add Decoder_2x4.v and Decoder_2x4_tb.v to the project.
 
-    Set Decoder_2x4_tb.v as the top module.
+Set Decoder_2x4_tb.v as the top module.
 
-    Run Behavioral Simulation.
+Run Behavioral Simulation.
 
-📊 Example Output (Console Example)
+## 📊 Example Output (Console Example)
 
 ----- 2x4 Decoder Simulation -----
 # en=0, a=00 → y=0000
@@ -110,7 +112,7 @@ Using Xilinx ISE (ISim)
 # en=1, a=10 → y=0100
 # en=1, a=11 → y=1000
 
-🧠 Applications
+## 🧠 Applications
 
     Memory address decoding
 
@@ -122,7 +124,7 @@ Using Xilinx ISE (ISim)
 
     Microcontroller peripheral selection
 
-✅ Future Improvements
+## ✅ Future Improvements
 
     Add 3x8 or 4x16 decoder using parameterized design
 
@@ -132,7 +134,7 @@ Using Xilinx ISE (ISim)
 
     Extend for BCD-to-decimal decoding
 
-🏁 Conclusion
+## 🏁 Conclusion
 
 This project demonstrates the design and verification of a 2x4 Decoder using Verilog HDL.
 The decoder converts a 2-bit binary input into one of four unique outputs, ensuring only a single active line at any time.
