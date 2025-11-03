@@ -108,7 +108,7 @@ Set decoder3_8_tb.v as the top module.
 Run Behavioral Simulation.
 ```
 ## 📊 Example Output (Console Example)
-
+```bash
 ----- 3x8 Decoder Simulation -----
 # en=0, A=000 → Y=00000000
 # en=1, A=000 → Y=00000001
@@ -119,7 +119,7 @@ Run Behavioral Simulation.
 # en=1, A=101 → Y=00100000
 # en=1, A=110 → Y=01000000
 # en=1, A=111 → Y=10000000
-
+```
 ## 🧠 Applications
 
 Memory address decoding
