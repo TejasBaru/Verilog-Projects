@@ -90,9 +90,9 @@ Using Icarus Verilog
 iverilog -o dec_sim Decoder_2x4.v Decoder_2x4_tb.v
 vvp dec_sim
 gtkwave dump.vcd &
-
+```
 ---
-
+```bash
 Using Xilinx ISE (ISim)
 
 Create a new project in Xilinx ISE.
