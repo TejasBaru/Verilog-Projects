@@ -66,7 +66,7 @@ Using Xilinx ISE (ISim)
 
 📈 Waveform
 
-![Waveform](waveform.png)
+![Waveform](Waveform.png)
 
 
 The waveform will confirm:
