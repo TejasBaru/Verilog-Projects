@@ -108,7 +108,10 @@ Using Xilinx ISE (ISim)
 # en=1, a=11 → y=1000
 ```
 ---
+## 📈 Waveform
 
+![Waveform](Waveform.png)
+---
 ## 🧠 Applications
 1.  Memory address decoding
 2.  Chip enable control
