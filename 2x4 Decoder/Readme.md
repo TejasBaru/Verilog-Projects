@@ -92,17 +92,12 @@ vvp dec_sim
 gtkwave dump.vcd &
 ```
 ---
-```bash
 Using Xilinx ISE (ISim)
 
-Create a new project in Xilinx ISE.
-
-Add Decoder_2x4.v and Decoder_2x4_tb.v to the project.
-
-Set Decoder_2x4_tb.v as the top module.
-
-Run Behavioral Simulation.
-```
+1. Create a new project in Xilinx ISE.
+2. Add Decoder_2x4.v and Decoder_2x4_tb.v to the project.
+3. Set Decoder_2x4_tb.v as the top module.
+4. Run Behavioral Simulation.
 ### 📊 Example Output (Console Example)
 ```bash
 ----- 2x4 Decoder Simulation -----
