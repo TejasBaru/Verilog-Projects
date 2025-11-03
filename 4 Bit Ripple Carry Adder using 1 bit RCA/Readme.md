@@ -76,6 +76,11 @@ gtkwave dump.vcd &
 # A=0111, B=0001, Cin=0 → Sum=1000, Cout=0
 # A=1111, B=0001, Cin=0 → Sum=0000, Cout=1
 ```
+
+## 📈 Waveform
+
+![Waveform](Waveform.png)
+---
 ## 🧠 Applications
 
 1. Arithmetic Logic Units (ALUs)
