@@ -90,6 +90,9 @@ gtkwave dump.vcd &
 # en=1, sel=11 → Y=I3
 ```
 ## 📈 Waveform
+
+![Waveform](Waveform.png)
+
 The waveform confirms:
 1. Only one input drives the output at a time.
 2. When en=0, the output Y remains in high-impedance (Z).
