@@ -101,7 +101,7 @@ The waveform confirms:
 3. I/O port selection and data routing
 4. Tri-state buffer logic demonstration circuits
 
-✅ Future Improvements
+## ✅ Future Improvements
 
 1. Add cascading for 8x1 or 16x1 multiplexers
 2. Parameterize the design for scalability
