@@ -62,4 +62,4 @@ Using Xilinx ISE (ISim)
 
 📈 Waveform
 
-![Waveform](2x4 Decoder/Waveform.png)
+![Waveform](Waveform.png)
