@@ -70,7 +70,7 @@ gtkwave dump.vcd &
 
     Run Behavioral Simulation and analyze waveforms.
 ```
-##📈 Waveform
+## 📈 Waveform
 
 ![Waveform](Waveform.png)
 ---
