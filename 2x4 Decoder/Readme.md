@@ -99,14 +99,14 @@ Using Xilinx ISE (ISim)
 3. Set Decoder_2x4_tb.v as the top module.
 4. Run Behavioral Simulation.
 ### 📊 Example Output (Console Example)
-
+```bash
 ----- 2x4 Decoder Simulation -----
 # en=0, a=00 → y=0000
 # en=1, a=00 → y=0001
 # en=1, a=01 → y=0010
 # en=1, a=10 → y=0100
 # en=1, a=11 → y=1000
-
+```
 ---
 
 ## 🧠 Applications
